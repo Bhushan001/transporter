@@ -1,0 +1,25 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        generate_statistics: true
+        format_sql: true
+    show-sql: true
+  datasource:
+    url: jdbc:mysql://localhost:3306/transporter-backend
+    username: root
+    password: root
+  profiles:
+    active: dev
+
+logging:
+  level:
+    org:
+      springframework:
+        web: trace
+        secutiry: trace
+      apache:
+        trace
+    ROOT: DEBUG
